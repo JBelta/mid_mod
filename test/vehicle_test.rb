@@ -12,4 +12,5 @@ class VehicleTest < Minitest::Test
     assert_equal "Honda", vehicle.make
     assert_equal "Civic", vehicle.model
   end
+  
 end
