@@ -7,6 +7,7 @@ class Vehicle
     @make = make
     @model = model
     @mph = 0
+    @passengers = []
   end
 
   def speeding?
@@ -15,5 +16,13 @@ class Vehicle
 
   def speed
     @mph += 60
+  end
+
+  def passengers
+    @passengers
+  end
+
+  def add_passenger(name)
+    @passengers << name
   end
 end
