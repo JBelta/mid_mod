@@ -10,4 +10,10 @@ class PassengerTest < Minitest::Test
     assert_instance_of Passenger, charlie
     assert_instance_of Passenger, taylor
   end
+
+  def test_values
+    charlie = Passenger.new({"name" => "Charlie", "age" => 18})
+    assert_equal "Charlie", charlie.name
+    assert_equal 18, charlie.age
+  end
 end
