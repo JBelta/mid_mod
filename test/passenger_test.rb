@@ -23,4 +23,13 @@ class PassengerTest < Minitest::Test
     assert_equal true, charlie.adult?
     assert_equal false, taylor.adult?
   end
+
+  def test_is_driver?
+    charlie = Passenger.new({"name" => "Charlie", "age" => 18})
+    taylor = Passenger.new({"name" => "Taylor", "age" => 12})
+    assert_equal false, charlie.driver?
+
+    charlie.drive
+    assert_equal true, charlie.driver?
+  end
 end
