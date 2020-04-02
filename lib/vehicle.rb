@@ -6,5 +6,14 @@ class Vehicle
     @year = year
     @make = make
     @model = model
+    @mph = 0
+  end
+
+  def speeding?
+    @mph >= 60
+  end
+
+  def speed
+    @mph += 60
   end
 end
